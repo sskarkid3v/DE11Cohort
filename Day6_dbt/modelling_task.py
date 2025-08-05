@@ -145,36 +145,7 @@ def create_combined_model():
 # Usage: python etl_script.py raw_tables | load_data | kimball | medallion | combined | all
 
 def main():
-    if len(sys.argv) < 2:
-        print("Usage: python etl_script.py [raw_tables | load_data | kimball | medallion | combined | all]")
-        return
-
-    option = sys.argv[1].lower()
-
-    if option == "raw_tables":
-        print("Creating raw tables...")
-        create_raw_tables()
-    elif option == "load_data":
-        print("Loading CSV files into raw tables...")
-        load_csv()
-    elif option == "kimball":
-        print("Creating Kimball model...")
-        create_kimball_model()
-    elif option == "medallion":
-        print("Creating Medallion model...")
-        create_medallion_model()
-    elif option == "combined":
-        print("Creating combined model...")
-        create_combined_model()
-    elif option == "all":
-        create_raw_tables()
-        load_csv()
-        create_kimball_model()
-        create_medallion_model()
-        create_combined_model()
-        print("ETL process completed successfully!")
-    else:
-        print("Invalid option. Please choose: raw_tables | load_data | kimball | medallion | combined | all")
+    #make changes to the main function to accept command-line arguments to run specific steps only
 
 if __name__ == "__main__":
     main()
