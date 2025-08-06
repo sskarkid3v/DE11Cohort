@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: dim_patients
+    description: "Dimension table for patients"
+    columns:
+      - name: patient_id
+        description: "Unique identifier for each patient"
+        tests:
+          - not_null
+          - unique
+      - name: patient_name
+        description: "Name of the patient"
+      - name: gender
+        description: "Gender of the patient"
+        tests:
+          - accepted_values:
+              values: ['Male','Female','Other']
+      - name: dob
+        description: "Date of birth of the patient"
+      - name: city
+        description: "City where the patient resides"
+
+  - name: dim_doctors
+    description: "Dimension table for doctors"
+    columns:
+      - name: doctor_id
+        description: "Unique identifier for each doctor"
+      - name: name
+        description: "Name of the doctor"
+      - name: specialization
+        description: "Specialization of the doctor"
+      - name: department_id
+        description: "Identifier for the department the doctor belongs to"
+      - name: department_name
+        description: "Name of the department the doctor belongs to"

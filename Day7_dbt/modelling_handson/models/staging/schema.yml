@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: public_raw_data
+    database: salesdb
+    schema: public_raw_data
+    tables:
+      - name: patients
+      - name: doctors
+      - name: departments
+      - name: appointments
+      - name: treatments
