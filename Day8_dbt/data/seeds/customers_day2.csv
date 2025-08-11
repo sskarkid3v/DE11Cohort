@@ -1,0 +1,5 @@
+customer_nk,first_name,last_name,email,city,country,signup_ts,change_ts
+C002,Noah,Kim,noah.kim@example.com,Dallas,USA,2025-01-03 11:30:00,2025-06-21 10:00:00
+C004,Liam,Wong,liam@example.com,Utah City,USA,2025-02-28 08:10:00,2025-06-21 10:00:00
+C006,Ethan,Nguyen,ethan@example.com,Boise,USA,2025-06-10 09:20:00,2025-06-21 10:00:00
+C003,Maya,Patel,maya@example.com,Boise,USA,2025-02-10 15:45:00,2025-06-10 10:00:00

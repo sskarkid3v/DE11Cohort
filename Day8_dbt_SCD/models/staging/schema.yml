@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: public_raw_data
+    database: salesdb
+    schema: public_raw_data
+    tables:
+      - name: customers_initial
+      - name: customers_day1
+      - name: customers_day2

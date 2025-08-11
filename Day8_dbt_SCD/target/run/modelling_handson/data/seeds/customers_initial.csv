@@ -1,0 +1,12 @@
+
+    
+    
+    truncate table "salesdb"."public_raw_data"."customers_initial";
+    -- dbt seed --
+    
+          insert into "salesdb"."public_raw_data"."customers_initial" (customer_nk, first_name, last_name, email, city, country, signup_ts) values
+          (%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s)
+      
+
+;
+  

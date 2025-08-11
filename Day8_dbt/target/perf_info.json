@@ -1,0 +1,61 @@
+{
+    "path_count": 137,
+    "parsed_path_count": 137,
+    "static_analysis_path_count": 5,
+    "static_analysis_parsed_path_count": 4,
+    "is_partial_parse_enabled": true,
+    "is_static_analysis_enabled": true,
+    "read_files_elapsed": 0.009246903000530438,
+    "load_macros_elapsed": 0.3401907569996183,
+    "parse_project_elapsed": 0.47042323500045313,
+    "patch_sources_elapsed": 0.014248640000005253,
+    "process_manifest_elapsed": 0.014409989999876416,
+    "load_all_elapsed": 0.8920753759994113,
+    "projects": [
+        {
+            "project_name": "modelling_handson",
+            "elapsed": 0.4655629789995146,
+            "parsers": [
+                {
+                    "parser": "model",
+                    "elapsed": 0.1789768369999365,
+                    "parsed_path_count": 5
+                },
+                {
+                    "parser": "snapshot",
+                    "elapsed": 0.12839557100051024,
+                    "parsed_path_count": 1
+                },
+                {
+                    "parser": "seed",
+                    "elapsed": 0.09680113099966547,
+                    "parsed_path_count": 3
+                },
+                {
+                    "parser": "test",
+                    "elapsed": 0.058236209999449784,
+                    "parsed_path_count": 1
+                }
+            ],
+            "parsed_path_count": 10
+        },
+        {
+            "project_name": "dbt_postgres",
+            "elapsed": 0.0024244859987447853,
+            "parsers": [],
+            "parsed_path_count": 0
+        },
+        {
+            "project_name": "dbt",
+            "elapsed": 0.0023206730002129916,
+            "parsers": [
+                {
+                    "parser": "doc",
+                    "elapsed": 0.0001584450001246296,
+                    "parsed_path_count": 1
+                }
+            ],
+            "parsed_path_count": 1
+        }
+    ]
+}
