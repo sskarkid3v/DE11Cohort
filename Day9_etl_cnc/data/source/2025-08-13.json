@@ -1,0 +1,4 @@
+[
+  {"order_id":"o-1005","order_date":"2025-08-12","customer_id":"c-4","amount":15.00,"updated_at":"2025-08-13T08:00:00Z"},
+  {"order_id":"o-1006","order_date":"2025-08-13","customer_id":"c-5","amount":77.77,"updated_at":"2025-08-13T09:00:00Z"}
+]
