@@ -1,0 +1,14 @@
+# create topic
+    docker compose exec kafka kafka-topics --create --topic demo-topic --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+
+# list topics
+    docker compose exec kafka kafka-topics --list --bootstrap-server localhost:9092
+
+# produce messages in real time
+    docker compose exec -e JDK_JAVA_OPTIONS="" kafka kafka-console-producer --topic demo-topic --bootstrap-server localhost:9092
+
+# consume messages in real time
+    docker compose exec -e JDK_JAVA_OPTIONS="" kafka kafka-console-consumer --topic demo-topic --from-beginning --bootstrap-server localhost:9092
+
+
+    
