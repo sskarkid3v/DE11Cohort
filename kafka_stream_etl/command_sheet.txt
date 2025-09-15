@@ -1,0 +1,27 @@
+#step 1 bring up the containers
+docker compose up -d
+
+#step 2 create a topic
+docker compose exec kafka kafka-topic --create --topc topic-demo --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+
+#strep 3 create sink table
+CREATE TABLE IF NOT EXISTS public.orders_raw (
+  event_ts      bigint,
+  order_id      int,
+  product       text,
+  quantity      int,
+  price         numeric(10,2),
+  user_id       int,
+  kafka_ts      timestamp default now()
+);
+
+#step 4 run the producer.py script
+
+#step 5 run spark streaming
+docker compose exec spark bash -lc '
+    /opt/bitnami/spark/bin/spark-submit \
+        --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.1,org.postgresql:postgresql:42.7.3 \
+        /opt/app/stream_to_postgres.py
+'
+
+# step 5 check the sink table
